@@ -54,7 +54,7 @@ resource "aws_eks_node_group" "ng1" {
   cluster_name    = aws_eks_cluster.App.name
   node_group_name = "${var.cluster_name}-ng1"
   node_role_arn   = var.eks_node_role
-  subnet_ids      = [var.subnet_ids[1]]
+  subnet_ids      = var.subnet_ids
   instance_types  = [var.node_instance_type]
   scaling_config {
     desired_size = var.node_count
@@ -70,7 +70,7 @@ resource "aws_eks_node_group" "ng2" {
   cluster_name    = aws_eks_cluster.App.name
   node_group_name = "${var.cluster_name}-ng2"
   node_role_arn   = var.eks_node_role
-  subnet_ids      = [var.subnet_ids[1]]
+  subnet_ids      = var.subnet_ids
   instance_types  = [var.node_instance_type]
   scaling_config {
     desired_size = var.node_count
