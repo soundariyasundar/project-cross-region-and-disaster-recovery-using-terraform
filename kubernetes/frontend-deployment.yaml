@@ -13,23 +13,18 @@ spec:
         app: frontend
     spec:
       containers:
-        - name: frontend
-          image: IMAGE_FRONTEND
-          ports:
-            - containerPort: 80
-          env:
-            - name: REACT_APP_API_URL
-              value: "http://backend-service:5000/api/hello"
+      - name: frontend
+        image: 530330388826.dkr.ecr.us-east-1.amazonaws.com/frontend:latest
+        ports:
+        - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend-service
+  name: frontend-svc
 spec:
   selector:
     app: frontend
   ports:
-    - protocol: TCP
-      port: 80
+    - port: 80
       targetPort: 80
-  type: ClusterIP

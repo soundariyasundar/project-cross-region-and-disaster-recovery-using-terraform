@@ -13,20 +13,18 @@ spec:
         app: backend
     spec:
       containers:
-        - name: backend
-          image: IMAGE_BACKEND
-          ports:
-            - containerPort: 5000
+      - name: backend
+        image: 530330388826.dkr.ecr.us-east-1.amazonaws.com/backend:latest
+        ports:
+        - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend-service
+  name: backend-svc
 spec:
   selector:
     app: backend
   ports:
-    - protocol: TCP
-      port: 5000
-      targetPort: 5000
-  type: ClusterIP
+    - port: 80
+      targetPort: 8080
