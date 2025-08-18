@@ -412,14 +412,14 @@ module "rds_mysql_role" {
   providers = {
     aws = aws.primary
   }
-  iam_role    = var.rds_mysql_role_name
+  iam_role    = var.rds_mysql_role_name_primary
   aws_service = var.rds_mysql_aws_services
   policy_arns = var.rds_mysql_policy_arns
 }
 module "rds_mysql_role_dr" {
   source      = "./modules/iam"
   providers   = { aws = aws.dr }
-  iam_role    = var.rds_mysql_role_name
+  iam_role    = var.rds_mysql_role_name_dr
   aws_service = var.rds_mysql_aws_services
   policy_arns = var.rds_mysql_policy_arns
 }

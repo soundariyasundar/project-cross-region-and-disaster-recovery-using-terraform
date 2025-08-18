@@ -115,7 +115,8 @@ eks_node_group_policy_arns = [
   "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy"
 ]
 
-rds_mysql_role_name    = "RDS-monitoring-role"
+rds_mysql_role_name_dr    = "RDS-monitoring-role-dr"
+rds_mysql_role_name_primary = "RDS-monitoring-role-primary"
 rds_mysql_aws_services = ["monitoring.rds.amazonaws.com"]
 rds_mysql_policy_arns = [
   "arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole"

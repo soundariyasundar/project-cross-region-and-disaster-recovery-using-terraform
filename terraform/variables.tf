@@ -164,7 +164,10 @@ variable "eks_node_group_policy_arns" {
 
 }
 
-variable "rds_mysql_role_name" {
+variable "rds_mysql_role_name_dr" {
+
+}
+variable "rds_mysql_role_name_primary" {
 
 }
 variable "rds_mysql_aws_services" {
