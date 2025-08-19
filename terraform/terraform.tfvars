@@ -21,7 +21,7 @@ allowed_ssh_cidrs   = ["49.207.186.65/32"]
 allowed_nginx_cidrs = ["0.0.0.0/0"]
 allowed_db_cidrs    = ["10.10.0.0/16", "10.20.0.0/16"]
 
-name              = "RDSdb"
+name              = "Rdsdatabase"
 db_instance_class = "db.t3.medium"
 db_username       = "admin"
 db_password       = "SuperSecret123!"
